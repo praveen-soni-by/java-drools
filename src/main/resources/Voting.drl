@@ -1,0 +1,13 @@
+package votingruls
+
+import com.syscho.drool.vo.Person;
+
+// declare any global variables here
+dialect "java"
+rule "Eligible For Voting"
+   when
+      person : Person(age>18)
+   then
+      person.setEligForVote(true);
+end
+

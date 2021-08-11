@@ -1,0 +1,13 @@
+package votingruls
+
+import com.syscho.drool.vo.Person;
+
+// declare any global variables here
+dialect "java"
+rule  "Eligible For AAdhar Card "
+   when
+      person : Person(age>5)
+   then
+      person.setEligForAadharCard(true);
+end
+
